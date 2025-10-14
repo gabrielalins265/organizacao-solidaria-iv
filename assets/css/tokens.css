@@ -1,0 +1,35 @@
+:root{--color-bg:#0b1020;--color-surface:#0f172a;--color-elev-1:#111827;--color-elev-2:#0b1220;--color-text:#e5e7eb;--color-muted:#94a3b8;--color-primary:#38bdf8;--color-primary-700:#0891b2;--color-secondary:#34d399;--color-secondary-700:#059669;--color-accent:#f59e0b;--color-danger:#f43f5e;--color-warning:#f59e0b;--color-success:#22c55e;--color-info:#60a5fa;--color-border:#1f2937;--color-overlay:rgba(2,6,23,.6);--fs-xxs:.75rem;--fs-xs:.875rem;--fs-sm:1rem;--fs-md:1.125rem;--fs-lg:1.25rem;--fs-xl:1.5rem;--fs-2xl:2rem;--fs-3xl:2.5rem;--sp-1:8px;--sp-2:16px;--sp-3:24px;--sp-4:32px;--sp-5:48px;--sp-6:64px;--radius-sm:10px;--radius-md:12px;--radius-lg:16px;--shadow-1:0 10px 20px rgba(0,0,0,.25);--shadow-2:0 20px 40px rgba(0,0,0,.35);--container:1100px}
+@media(min-width:480px){:root{--bp:480px}}@media(min-width:768px){:root{--bp:768px}}@media(min-width:1024px){:root{--bp:1024px}}@media(min-width:1280px){:root{--bp:1280px}}@media(min-width:1536px){:root{--bp:1536px}}/* A11y additions */
+:root {
+  --focus-ring: #ffffff;
+  --focus-offset: 3px;
+}
+
+/* High-contrast theme (toggle with .theme-contrast on html) */
+html.theme-contrast {
+  --color-bg: #000000;
+  --color-surface: #000000;
+  --color-elev-1: #0a0a0a;
+  --color-elev-2: #000000;
+  --color-text: #ffffff;
+  --color-muted: #e5e7eb;
+  --color-primary: #00ffff; /* cyan on black for strong contrast */
+  --color-secondary: #00ff87;
+  --color-accent: #ffd000;
+  --color-border: #bfbfbf;
+}
+
+/* Respect user preference */
+@media (prefers-contrast: more) {
+  :root {
+    --color-primary: #22d3ee;
+    --color-secondary: #34d399;
+    --color-border: #cbd5e1;
+  }
+}
+
+/* Strong focus outlines */
+:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}
